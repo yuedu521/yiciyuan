@@ -1,0 +1,44 @@
+[
+  {
+    "bookSourceComment": "感谢关耳大大",
+    "bookSourceGroup": "📺影视",
+    "bookSourceName": "📺 番茄短剧",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.shanhuzs.com/",
+    "customOrder": 1150,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"女频恋爱\",\"url\":\"/fqsansw/5---女频恋爱-----{{page}}---.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"反转爽剧\",\"url\":\"/fqsansw/5---反转爽-----{{page}}---.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"脑洞悬疑\",\"url\":\"/fqsansw/5---脑洞悬疑-----{{page}}---.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"年代穿越\",\"url\":\"/fqsansw/5---年代穿越-----{{page}}---.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"古装仙侠\",\"url\":\"/fqsansw/5---古装仙侠-----{{page}}---.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"现代都市\",\"url\":\"/fqsansw/5---现代都市-----{{page}}---.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}}]",
+    "lastUpdateTime": 1730552560603,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "kind": ".tag@a@text"
+    },
+    "ruleContent": {
+      "content": "##\"url\":\"(.*)\",\"url_next\"##$1###@js:\nif(book.durChapterIndex==chapter.index){\n\t\tjava.startBrowser(result.replace(/\\\\/g,''),title)\n\t\tjava.toast('正在加载视频\\n视频加载较慢，请耐心等待')\n\t}\n'【刷新正文】播放\\n✅直链:\\n'+result",
+      "nextContentUrl": "",
+      "payAction": "",
+      "replaceRegex": "##\\",
+      "sourceRegex": "",
+      "title": "",
+      "webJs": ""
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "bookList": "class.col8",
+      "bookUrl": "h4@a@href",
+      "checkKeyWord": "断亲后",
+      "coverUrl": "img@data-original",
+      "kind": ".text@text",
+      "name": "h4@a@text"
+    },
+    "ruleToc": {
+      "chapterList": "a[href^=\"/fqsanpy/\"]",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/fqsansc/{{key}}----------{{page}}---.html",
+    "weight": 0
+  }
+]
