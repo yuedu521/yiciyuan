@@ -1,0 +1,45 @@
+[
+  {
+    "bookSourceName": "绅士漫画",
+    "bookSourceType": 2,
+    "bookSourceUrl": "https://wnacg.date",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"更新\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums<,_error>.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"同人誌\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-5.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"漢化\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-1.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"日語\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-12.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"英語\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-16.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"CG畫集\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-2.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"Cosplay\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-3.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"單行本\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-6.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"漢化\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-9.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"日語\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-13.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"英語\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-17.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"雜誌&短篇\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-7.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"漢化\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-10.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"日語\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-14.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"英語\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-18.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"韓漫\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-19.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"漢化\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-20.html\",\"style\":{\"layout_flexBasisPercent\":0.29}},{\"title\":\"生肉\",\"url\":\"https://{{eval(String(source.loginUrl))}}/albums-index<,-page-{{page}}>-cate-21.html\",\"style\":{\"layout_flexBasisPercent\":0.29}}]",
+    "header": "{\n  \"User-Agent\": \"Mozilla/5.0 (Linux; Android 8.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36\"\n}",
+    "lastUpdateTime": 1730811943173,
+    "loginUi": "[\n  {\n    \"name\": \"输入线路序号 (0 ~ 3)\",\n    \"type\": \"text\"\n  },\n  {\n    \"name\": \"\\u2005         当前域名         \\u2005\",\n    \"type\": \"button\",\n    \"action\": \"getDomain()\"\n  },\n  {\n    \"name\": \"    设置域名 (手动)   \\u2005\",\n    \"type\": \"button\",\n    \"action\": \"setDomain(false)\"\n  },\n  {\n    \"name\": \"      更新线路列表     \\u2005\",\n    \"type\": \"button\",\n    \"action\": \"getDomains()\"\n  },\n  {\n    \"name\": \"    设置域名 (自动)   \\u2005\",\n    \"type\": \"button\",\n    \"action\": \"setDomain(true)\"\n  },\n  {\n    \"name\": \"登录账号\",\n    \"type\": \"text\"\n  },\n  {\n    \"name\": \"登录密码\",\n    \"type\": \"password\"\n  },\n  {\n    \"name\": \"　　　　　　　     点击登录      　　　　　　　\",\n    \"type\": \"button\",\n    \"action\": \"login()\"\n  }\n]",
+    "loginUrl": "var variable = {domain: \"\", domains: []};\ntry {\n  variable = JSON.parse(source.getVariable());\n} catch(e) {\n  setVariable(variable);\n}\nfunction setVariable(obj) {\n  source.setVariable(JSON.stringify(obj, null, 2));\n}\nvar header = {\n  \"User-Agent\": \"Mozilla/5.0 (Linux; Android 8.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36\"\n};\nfunction getDomains() {\n  java.toast(\"获取线路列表...\");\n  try {\n    var res = java.get(\"https://wnacg.date/\", header);\n    if (res.statusCode()==200) {\n      var domains = res.body().match(/[^>]+(?=<\\/i><\\/a>)/g);\n      variable.domains = domains;\n      setVariable(variable);\n      java.toast(\"获取线路成功\\n\" + domains.join(\"\\n\"));\n    } else {\n      java.toast(\"获取线路失败\\n\" + res.statusCode());\n    }\n  } catch(e) {\n    java.toast(\"获取线路失败\\n\" + e.message);\n  }\n}\nfunction setDomain(auto) {\n  if (variable.domains.length==0) {\n    java.toast(\"当前域名为空，将自动获取线路列表...\");\n    getDomains();\n  }\n  if (!auto) {\n    var i = +result[\"输入线路序号 (0 ~ 3)\"];\n    if (i >= variable.domains.length) {\n      i = variable.domains.length - 1;\n    }\n    variable.domain = variable.domains[i];\n    setVariable(variable);\n    java.toast(\"手动设置域名成功\\n\" + variable.domain);\n    return variable.domain;\n  }\n  java.toast(\"自动更新线路列表，并设置域名...\");\n  getDomains();\n  for (var domain of variable.domains) {\n    try {\n      var res = java.head(\"https://\"+domain, header);\n      if (res.statusCode()==200) {\n        variable.domain = domain;\n        setVariable(variable);\n        java.toast(\"自动设置域名成功\\n\" + domain);\n        return domain;\n      } else {\n        java.toast(\"访问域名失败\\n\" + domain + \"\\n\" + res.statusCode());\n      }\n    } catch(e) {\n      java.toast(\"访问域名失败\\n\" + domain + \"\\n\" + e.message);\n    }\n  }\n}\nfunction getDomain() {\n  java.longToast(\"当前域名为\\n\" + variable.domain + \"\\n共有\" + variable.domains.length + \"条线路\\n\" + variable.domains.join(\"\\n\"));\n}\nfunction login() {\n  var info = source.getLoginInfoMap();\n  try {\n    if (\"登录账号\" in result) info = result;\n  } catch(e) {}\n  var user = String(info.get(\"登录账号\"));\n  var pass = String(info.get(\"登录密码\"));\n  if (!user || !pass) {\n    java.toast(\"未输入账号或密码\");\n    throw new Error(\"未输入账号或密码\");\n  }\n  var body = \"normal=1&login_name=\"+ user + \"&login_pass=\" + pass;\n  try {\n    var res = java.post(\"https://\"+variable.domain+\"/users-check_login.html\", body, header);\n    if (res.statusCode()==200) {\n      var json = JSON.parse(res.body());\n      if (json.ret==false) {\n        java.toast(json.html);\n        throw new Error(json.html);\n      }\n      var ck = JSON.stringify({\n        \"Cookie\": res.cookies().entrySet().toArray().join(\"; \")\n      });\n      source.putLoginHeader(ck);\n      java.toast(user + \" 登录成功\");\n    } else {\n      java.toast(\"登录失败\\n\" + res.statusCode());\n      throw new Error(\"登录失败\\n\" + res.statusCode());\n    }\n  } catch(e) {\n    java.toast(\"登录失败\\n\" + e.message);\n    throw new Error(\"登录失败\\n\" + e.message);\n  }\n}\nif (variable.domains.length==0) {\n  setDomain(true);\n}\nvariable.domain",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": ".introName@text",
+      "coverUrl": "#Cover@img@src##\\/{2,}##//",
+      "intro": ".txtDesc@textNodes&&.txtItme.2@.date@text##\\s*.*(廣告屏蔽|广告屏蔽).*",
+      "kind": ".txtItme.1@.pd@text##\\s*\\/\\s*##,",
+      "name": "#comicName@text"
+    },
+    "ruleContent": {
+      "content": "@js:\nif (result.includes(\"/photos-item-aid\")) {\n  var res = java.ajax(baseUrl.replace(\"list\", \"item\"));\n  var page_url = res.match(/\"page_url\":(\\[.*\\]),/)[1].replace(/\\\\|,(?!\")/g,\"\");\n  JSON.parse(page_url).map(imgurl=>{\n    return \"<img src=\\\"\" + imgurl + \"\\\">\"\n  }).join(\"\\n\");\n} else {\n  eval(result.match(/var fast_img_host=\\\\\"([^\"]*)\\\\\";/)[0].replace(/\\\\/g,\"\"));\n  eval(result.match(/var imglist = (\\[\\{.*\\}\\]);/)[0].replace(/\\\\/g,\"\"));\n  imglist.filter(img=>{\n    if (!img.caption) return img.url;\n  }).map(img=>{\n    return \"<img src=\\\"\" + img.url + \"\\\">\"\n  }).join(\"\\n\");\n}"
+    },
+    "ruleExplore": {},
+    "ruleReview": {},
+    "ruleSearch": {
+      "bookList": "#classify_container li",
+      "bookUrl": "a.0@href",
+      "coverUrl": "img@src",
+      "intro": "",
+      "kind": ".info@text##(張圖片|张图片).*##P",
+      "lastChapter": ".info@text##.*(創建於|创建于)",
+      "name": ".txtA@text||span.0@text"
+    },
+    "ruleToc": {
+      "chapterList": "#continusRead",
+      "chapterName": "a@text",
+      "chapterUrl": "a@href##-slist-##-webp-"
+    },
+    "searchUrl": "https://{{eval(String(source.loginUrl))}}/q/<,index.php>?q={{key}}<,&m=>&f=_all&syn=yes&s=create_time_DESC<,&p={{page}}>",
+    "weight": 0
+  }
+]
