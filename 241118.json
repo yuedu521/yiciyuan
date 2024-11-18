@@ -1,0 +1,204 @@
+[
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "💿🈲",
+    "bookSourceName": "66影视",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://66yy.net",
+    "bookUrlPattern": "",
+    "concurrentRate": "",
+    "coverDecodeJs": "",
+    "customOrder": 503,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "",
+    "header": "{\n\t\"User-Agent\":\"Mozilla/5.0 (Linux; Android 10; MI 8 Build/QKQ1.190828.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36\"\n\t}",
+    "lastUpdateTime": 1724652968048,
+    "loginCheckJs": "",
+    "loginUi": "",
+    "loginUrl": "",
+    "respondTime": 1895,
+    "ruleBookInfo": {
+      "author": "",
+      "canReName": "",
+      "coverUrl": "",
+      "init": "",
+      "intro": "",
+      "kind": "",
+      "lastChapter": "",
+      "name": "",
+      "tocUrl": "",
+      "wordCount": ""
+    },
+    "ruleContent": {
+      "content": "class.myui-player__video@script.0@all##.*url\":\"(.*)\",\"url_next\":.*from\":\"(.*)\",\"server.*##$1_$2\n@js:\nres=result.match(/(.*)_(.*)/)\nurl=res[1].replace(/\\\\/g,'')\nif(res[2]==\"wjm3u8\"){\nresult=\"https://jx.wujinkk.com/dplayer/?url=\"+url\n}else if(res[2]==\"bjm3u8\"){\nresult=\"https://zy.aoxtv.com/m3u8.php?url=\"+url\n}else if(res[2]==\"tkm3u8\"){\nresult=\"https://jx.huishij.com/yun/?url=\"+url\n}else{\nresult=\"https://jx.bozrc.com:4433/player/?url=\"+url\n}\nif(book.durChapterIndex==chapter.index){\n\t\tjava.startBrowser(result,title)\n\t\tjava.toast('正在加载视频\\n视频加载较慢，请耐心等待')\n\t}\n'<p>【刷新正文】播放\\n✅直链:\\n'+result",
+      "imageStyle": "",
+      "nextContentUrl": "",
+      "replaceRegex": "",
+      "sourceRegex": "",
+      "webJs": ""
+    },
+    "ruleExplore": {
+      "author": "",
+      "bookList": "",
+      "bookUrl": "",
+      "coverUrl": "",
+      "intro": "",
+      "kind": "",
+      "lastChapter": "",
+      "name": ""
+    },
+    "ruleSearch": {
+      "author": "class.detail@p.1@ownText",
+      "bookList": "class.myui-vodlist__media@li",
+      "bookUrl": "a.0@href",
+      "coverUrl": "a@data-original",
+      "intro": "p.3@ownText",
+      "kind": "p.2@text##(分类|地区|年份)：##,",
+      "lastChapter": "class.pic-text@text",
+      "name": "class.title@text",
+      "wordCount": "class.pic-tag@text"
+    },
+    "ruleToc": {
+      "chapterList": "<js>\nall=\"\"\n\n//线路个数\nlen=java.getElements('class.nav-tabs[0]@li').length\n\nfor(i=1;i<=len;i++){\n\t\n\t//获取线路名称\nfrom=java.getElements('class.nav-tabs[0]@li')[i-1].text()\n\n//获取线路的播放列表\nres=java.getElements('class.myui-content__list')[i-1]\n\n//把线路名称插入列表里，在更新时间那里显示\nres=JSON.stringify(res).replace(/<\\/a>/g,'<p>'+'🎬'+from+'</p></a>')\n\nall+=JSON.parse(res)\n}\nall\n</js>\nclass.myui-content__list@li@a",
+      "chapterName": "ownText",
+      "chapterUrl": "href",
+      "isVip": "",
+      "isVolume": "",
+      "nextTocUrl": "",
+      "updateTime": "p@text"
+    },
+    "searchUrl": "/vodsearch/-------------.html?wd={{key}}&submit=",
+    "variableComment": "",
+    "weight": 0
+  },
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "💿🈲",
+    "bookSourceName": "榴莲影视",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://66yy.net/",
+    "customOrder": 511,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 11; Pixel 5;Windows NT 10.0; Trident/7.0; rv:11.0; Win64; x64) like Gecko AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36\"}",
+    "lastUpdateTime": 1730538032831,
+    "respondTime": 181134,
+    "ruleBookInfo": {},
+    "ruleContent": {
+      "content": "class.myui-player__video@script.0@all##.*url\":\"(.*)\",\"url_next\":.*from\":\"(.*)\",\"server.*##$1_$2\n@js:\nres=result.match(/(.*)_(.*)/)\nurl=res[1].replace(/\\\\/g,'')\nif(res[2]==\"wjm3u8\"){\nresult=\"https://jx.wujinkk.com/dplayer/?url=\"+url\n}else if(res[2]==\"bjm3u8\"){\nresult=\"https://zy.aoxtv.com/m3u8.php?url=\"+url\n}else if(res[2]==\"tkm3u8\"){\nresult=\"https://jx.huishij.com/yun/?url=\"+url\n}else{\nresult=\"https://jx.bozrc.com:4433/player/?url=\"+url\n}\nif(book.durChapterIndex==chapter.index){\n\t\tjava.startBrowser(result,title)\n\t\tjava.toast('正在加载视频\\n视频加载较慢，请耐心等待')\n\t}\n'<p>【刷新正文】播放\\n✅直链:\\n'+result"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "class.detail@p.1@ownText",
+      "bookList": "class.myui-vodlist__media@li",
+      "bookUrl": "a.0@href",
+      "coverUrl": "a@data-original@src",
+      "intro": "p.3@ownText",
+      "kind": "p.2@text##(分类|地区|年份)：##,",
+      "lastChapter": "class.pic-text@text",
+      "name": "class.title@text",
+      "wordCount": "class.pic-tag@text"
+    },
+    "ruleToc": {
+      "chapterList": "<js>\nall=\"\"\n\n//线路个数\nlen=java.getElements('class.nav-tabs[0]@li').length\n\nfor(i=1;i<=len;i++){\n\t\n\t//获取线路名称\nfrom=java.getElements('class.nav-tabs[0]@li')[i-1].text()\n\n//获取线路的播放列表\nres=java.getElements('class.myui-content__list')[i-1]\n\n//把线路名称插入列表里，在更新时间那里显示\nres=JSON.stringify(res).replace(/<\\/a>/g,'<p>'+'🎬'+from+'</p></a>')\n\nall+=JSON.parse(res)\n}\nall\n</js>\nclass.myui-content__list@li@a",
+      "chapterName": "ownText",
+      "chapterUrl": "href",
+      "preUpdateJs": "java.refreshTocUrl()",
+      "updateTime": "p@text"
+    },
+    "searchUrl": "/vodsearch/-------------.html?wd={{key}}&submit=",
+    "weight": 0
+  },
+  {
+    "bookSourceComment": "//默认video太丑？可以通过解析接口改变样式\n//v0.4\n//提取到官方链接，通过解析接口解析播放\n//增加解析相关js\njx = {\n//是否启用？1启用,0禁用\n\t\t启用: 1 ,\n//依次遍历，获取第一个启用的接口\n\t\tlist: [\n[ 1 ,\n\"飞飞解析\",\"https://www.yemu.xyz/?url=\"],\n[ 0 ,\n\"人人迷解析\",\"https://jx.blbo.cc:4433/?url=\"],\n[ 0 ,\n\"思古解析\",\"https://jsap.attakids.com/?url=\"],\n[ 0 ,\n\"OK解析\",\"https://okjx.cc/?url=\"],\n[ 0 ,\n\"奥特曼解析\",\"https://api.aoteman.tv/?url=\"],\n[ 0 ,\n\"维多解析\",\"http://jx.ivito.cn/?url=\"],\n\t\t\t]\n\t}\njxurl=\"\";jxname=\"\"\nif(jx.启用==true){\nfor(i in jx.list){\n\tif(jx.list[i][0]==true){\n\t\tjxname='<p>📑 已启用解析接口(在源注释调整)</p><p>当前接口：'+jx.list[i][1]+'</p>'\n\t\tjxurl=jx.list[i][2]\n\t\tbreak\n\t}\n}}",
+    "bookSourceGroup": "💿🈲",
+    "bookSourceName": "我爱电影",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.5imv.com",
+    "customOrder": 2009,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "---------------------------------电影---------------------------------\n动作::https://www.5imv.com/list-28-1-0-0-0-{{page}}-{{page}}.html\n---------------------------------电视剧---------------------------------\n国产::https://www.5imv.com/list-38-2-0-0-0-{{page}}.html",
+    "lastUpdateTime": 1720210714241,
+    "respondTime": 4146,
+    "ruleBookInfo": {
+      "author": ".ibox_minfo.2@text",
+      "coverUrl": ".ibox_img@img@src",
+      "intro": "[name=\"description\"]@content",
+      "kind": ".ibox_minfo.0@text",
+      "lastChapter": ".lijibofang@text",
+      "name": "h1@text",
+      "tocUrl": ""
+    },
+    "ruleContent": {
+      "content": "##var playing_url =  \"(.*?)\"##$1###\n//提取视频m3u8真实链接\n\n//调用阅读内置浏览器打开播放\n@js:\neval(String(source.bookSourceComment))\nif(book.durChapterIndex==chapter.index){\n\t\tjava.startBrowser(jxurl+result,title)\n//播放页提示文字\n\t\tjava.toast('骚等2秒>点击▶播放\\n无法播放>右上角┇>浏览器打开')\n\t}\n//正文页提示文字\n'<p>👉刷新正文👈播放<br>或者👉点击章节链接👈跳转到浏览器播放</p><p>阅读内置浏览器限制：<br>m3u8才可以在阅读内置浏览器播放<br>带播放器链接必须右上角┇>浏览器打开>才可以播放</p>'"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": ".c-r@text",
+      "bookList": "ul.col-ul-list@li",
+      "bookUrl": "a@href",
+      "coverUrl": "img@data-src",
+      "intro": "small@text",
+      "kind": ".c-l@text",
+      "lastChapter": ".qingxidu@text",
+      "name": "img@alt",
+      "wordCount": ".c-c@text"
+    },
+    "ruleToc": {
+      "chapterList": ".bofang_tlist@ul@li",
+      "chapterName": "a@text",
+      "chapterUrl": "a@href",
+      "preUpdateJs": ""
+    },
+    "searchUrl": "https://www.5imv.com/search-0-0-0-1-{{key}}.html",
+    "weight": 0
+  },
+  {
+    "bookSourceComment": "\n\n\n星辰影院\nhttps://www.gchaucer.com",
+    "bookSourceGroup": "💿🈲",
+    "bookSourceName": "南瓜影视",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.nanguady.cc",
+    "customOrder": 2011,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "exploreUrl": "",
+    "header": "{\n\"User-Agent\":\"Mozilla/5.0 (Linux; Android 11; Pixel 5;Windows NT 10.0; Trident/7.0; rv:11.0; Win64; x64) like Gecko AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36\"\n}",
+    "lastUpdateTime": 1730538020787,
+    "respondTime": 180328,
+    "ruleBookInfo": {
+      "author": "class.product-excerpt.1@text## ##,\n<js>\nresult=result.replace(/主演：,/,'')\n</js>",
+      "intro": "class.product-excerpt.-1@span@text"
+    },
+    "ruleContent": {
+      "content": "text\n@js:\nif(result.match(/jiexi/)){\n\tresult=book.origin+result\n\t}\nif(book.durChapterIndex==chapter.index){\n\t\tjava.startBrowser(result,title)\n\t\tjava.toast('正在加载视频\\n视频加载较慢，请耐心等待')\n\t}\n'【刷新正文】播放\\n✅直链:\\n'+result"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "bookList": "class.lists-content@li",
+      "bookUrl": "a.0@href",
+      "checkKeyWord": "",
+      "coverUrl": "img@src",
+      "intro": "{{\"📺南瓜电影\"}}",
+      "kind": "class.orange@text",
+      "lastChapter": "class.note@text",
+      "name": "h2@text",
+      "wordCount": "class.rate@text##$##分"
+    },
+    "ruleToc": {
+      "chapterList": "<js>\nall=\"\"\n\n//线路个数\nlen=java.getElements('class.listab').length\n\nfor(i=1;i<=len;i++){\n\t\n\t//获取线路名称\nfrom=java.getElements('class.listab')[i-1].text()\n\n//获取线路的播放列表\nres=java.getElements('class.playlist')[i-1]\n\n//把线路名称插入列表里，在更新时间那里显示\nres=JSON.stringify(res).replace(/<\\/a>/g,'<p>'+'🎬'+from+'</p></a>')\n\nall+=JSON.parse(res)\n}\nall\n</js>\nclass.playlist@ul@li@a",
+      "chapterName": "ownText",
+      "chapterUrl": "onclick\n<js>\nnum=result.match(/play\\((\\d+),(\\d+)\\);/)\ni=++num[1]\nk=++num[2]\nbaseUrl+\"?sid=\"+i+\"&nid=\"+k\n</js>",
+      "preUpdateJs": "java.refreshTocUrl()",
+      "updateTime": "p@text"
+    },
+    "searchUrl": "/vodsearch/-------------.html?wd={{key}}",
+    "weight": 0
+  }
+]
