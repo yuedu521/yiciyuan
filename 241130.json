@@ -1,0 +1,52 @@
+[
+  {
+    "bookSourceComment": "//2024.11.29",
+    "bookSourceGroup": "写源",
+    "bookSourceName": "搜漫◎GEd520◎",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.socomic.com/",
+    "customOrder": -98524,
+    "enabled": false,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"全部🏷分类\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":1}},{\"title\":\"校园\",\"url\":\"https://www.socomic.com/w2/xy____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"少儿\",\"url\":\"https://www.socomic.com/w2/se____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"热血\",\"url\":\"https://www.socomic.com/w2/rx____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"悬疑\",\"url\":\"https://www.socomic.com/w2/xy1____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"科幻\",\"url\":\"https://www.socomic.com/w2/kh____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"搞笑\",\"url\":\"https://www.socomic.com/w2/gx____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"格斗\",\"url\":\"https://www.socomic.com/w2/gd____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"励志\",\"url\":\"https://www.socomic.com/w2/lz____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"推理\",\"url\":\"https://www.socomic.com/w2/tl____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"青春\",\"url\":\"https://www.socomic.com/w2/qc____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"神魔\",\"url\":\"https://www.socomic.com/w2/sm____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"文艺\",\"url\":\"https://www.socomic.com/w2/wy____.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},]",
+    "header": "{'User-Agent':'Mozilla/5.0 (Linux; Android 14; V2304A; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.6312.118 Mobile Safari/537.36',\n\"Referer\":\"https://www.socomic.com/\"}",
+    "lastUpdateTime": 1732879484074,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "coverUrl": "##background\\:\\surl\\((.*?)\\)##$1###",
+      "name": ""
+    },
+    "ruleContent": {
+      "content": "#zanpiancms_player@all\n<js>\nresult=result.match(/[^\"]+index\\.m3u8/)[0]\nif(book.durChapterIndex==chapter.index){\n\tjava.startBrowser(\"https://jx.jxbdzyw.com/m3u8/?url=\"+result,title)\n\t\tjava.toast('正在加载视频\\n视频加载较慢，请耐心等待')\n\t}\n'【刷新正文】播放\\n直链:\\n'+result\n</js>",
+      "title": ""
+    },
+    "ruleExplore": {
+      "author": ".subtitle@text",
+      "bookList": "#content@li",
+      "bookUrl": "h5@a@href",
+      "coverUrl": "##data\\-original\\=\\\"(.*?)\\\"##$1###",
+      "lastChapter": "span.2@text##更新至",
+      "name": "h5@a@text",
+      "wordCount": ".score@text"
+    },
+    "ruleSearch": {
+      "author": "##字幕\\：\\<\\/span\\>(.*?)\\<##$1###",
+      "bookList": "#content@div",
+      "bookUrl": "a.0@href",
+      "coverUrl": ".video-pic.0@data-original",
+      "intro": ".details-content-default@text",
+      "kind": "##年代\\：\\<\\/span\\>(.*?)\\<##$1###",
+      "lastChapter": ".hidden-xs.1@text##状态：",
+      "name": "a.0@text",
+      "wordCount": "##时间\\：\\<\\/span\\>(.*?)\\<##$1###"
+    },
+    "ruleToc": {
+      "chapterList": "-#con_playlist_1@li",
+      "chapterName": "a@text",
+      "chapterUrl": "a@href"
+    },
+    "searchUrl": "/search/,{\n \"body\": \"wd={{key}}\",\n \"method\": \"POST\"\n}",
+    "weight": 0
+  }
+]
