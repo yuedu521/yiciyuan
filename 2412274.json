@@ -1,4 +1,4 @@
-{
+[{
     "bookSourceComment": "",
     "bookSourceGroup": "常规",
     "bookSourceName": "精华书阁",
@@ -54,3 +54,4 @@
     "searchUrl": "\/search.html?ie=utf-8&word={{key}}&page={{page}}",
     "weight": 0
 }
+]
