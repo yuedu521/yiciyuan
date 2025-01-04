@@ -1,0 +1,44 @@
+[
+  {
+    "bookSourceGroup": "book",
+    "bookSourceName": "🌟民间故事",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.6mj.com/",
+    "customOrder": 4,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"中国故事\",\"url\":\"/news/minjian/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"外国故事\",\"url\":\"/news/waiguo/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"中国神话\",\"url\":\"news/shenhua/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"机智故事\",\"url\":\"news/jizhi/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"诗联趣画\",\"url\":\"news/shilian/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"传奇故事\",\"url\":\"news/chuanqi/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"历代皇帝\",\"url\":\"news/king/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"后宫故事\",\"url\":\"news/hougong/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"历代名女\",\"url\":\"news/mingnv/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"历代名妓\",\"url\":\"news/mingji/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"将相传奇\",\"url\":\"news/jiangxiang/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"武侠故事\",\"url\":\"news/wuxia/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"鬼怪志异\",\"url\":\"news/gui/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"野史趣闻\",\"url\":\"news/ysqw/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"现代故事\",\"url\":\"news/xiandai/{{page-1==0?'index':'index_'+page}}.htm\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}}]",
+    "header": "{\n \"User-Agent\":\"Mozilla/5.0 (Android 14; Mobile; rv:120.0) Gecko/120.0 Firefox/120.0\"\n}",
+    "lastUpdateTime": 1735648853883,
+    "respondTime": 180000,
+    "ruleBookInfo": {},
+    "ruleContent": {
+      "content": "p@font[size=\"3\"]@html||p@font[size=\"4\"]@html||.content.0@html\n<js>\nresult=result.replace(/<img width=\"1\".*/g,'---------------------------------').replace(/<\\/?o:p>/g,'').replace(/<img.*/g,'').replace(/<p align=\"right\">.+<\\/p>|<p align=\"left\">.+<\\/p>/g,'').replace(/<h3>相关内容<\\/h3>|<p>无相关新闻<\\/p>/g,'').replace(/<!--.*-->/g,'')\nresult+=\"🚫\"\n</js>",
+      "nextContentUrl": "[title=\"下一页\"]@href",
+      "replaceRegex": "##\\s*🚫\\s*|.*{{chapter.title}}.*|佚名|来源.*|\\|.*\\<.*\\>.*\\||.*上一篇文章.*|.*下一篇文章.*|转载请注明转载网址.*|标题.*|http.*"
+    },
+    "ruleExplore": {
+      "author": "p.1@text",
+      "bookList": ".meta@table.0@tr",
+      "bookUrl": "a.0@href",
+      "name": "p.0@text"
+    },
+    "ruleSearch": {
+      "author": "$.author##.*\\| ([^\\|]+)\\| \\[.*\\]##$1",
+      "bookList": "<js>\nvar data=[]\nlist=java.getElements('.g')\nc=java.getElements('.content')\nfor(i=0;i<list.length;i++){\n\ttext=list[i].select('a').text()\n\thref=list[i].select('a').attr('href')\n\tauthor=list[i].select('font').text()\n\tdesc=c[i].text()\n\tdata.push(JSON.stringify({\n\t\ttext,href,desc,author\n\t}))\n}\ndata\n</js>",
+      "bookUrl": "$.href",
+      "checkKeyWord": "关羽",
+      "intro": "$.desc",
+      "kind": "$.author##　.*|\\d+:\\d+:\\d+|\\| [^\\|]+\\| \\[.*\\]|\\|##,",
+      "name": "$.text"
+    },
+    "ruleToc": {
+      "chapterList": "html",
+      "chapterName": "{{book.name}}",
+      "updateTime": ".meta@p.1@a@text"
+    },
+    "searchUrl": "/Search.asp?GetType=MainInfo&no-cache=&Keyword={{java.encodeURI(key,'gb2312')}}&SubSys=NS&s_type=title&ClassId=&Page={{page}}&_=",
+    "weight": 0
+  }
+]
