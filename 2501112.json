@@ -1,0 +1,47 @@
+[
+  {
+    "bookSourceComment": "//By:空白,无发现",
+    "bookSourceGroup": "",
+    "bookSourceName": "NTR小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.aahhss.com/",
+    "bookUrlPattern": "https?://www.aahhss.com/book/\\d+/",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "",
+    "header": "",
+    "lastUpdateTime": 1736537126785,
+    "respondTime": 180565,
+    "ruleBookInfo": {
+      "author": ".authors@text",
+      "coverUrl": "img.0@src",
+      "init": "",
+      "intro": "&nbsp;\n📖 书名：{{@@h1@text}}\n👤 作者：{{@@.authors@text}}\n👀 时间：{{@@meta.-3@content}}\n📜 收藏：{{@@.collect dd@text}}\n🗂 分类：{{@@.status dd@text}}\n🔖 标签：{{@@.tag@text}}\n🗿 肉量：{{@@.pornrate dd@text}}\n✏  评分：{{@@.score dd@text}}\n🕰 最新：{{@@.new dd a@text}}\n👁 观看：{{@@.onclick dd@text}}\n💐 字数：{{@@.wordcount dd@text}}\n🍧 猜你：{{@@.book-like a@text##\\n##❤️}}{{'\\n&lrm;\\n'}}\n🏷 简介：{{@@.book-desc@text}}",
+      "kind": ".status dd@text&&.tag a@text",
+      "lastChapter": ".new dd@text",
+      "name": "h1@text",
+      "wordCount": ".wordcount@text"
+    },
+    "ruleContent": {
+      "content": ".content@p@textNodes"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "span@text",
+      "bookList": ".grid-item",
+      "bookUrl": "a@href##www.*com##www.aahhss.com",
+      "coverUrl": "img@src",
+      "lastChapter": "a@href##www.*com##www.aahhss.com<js>java.ajax(result)</js>.new dd@text",
+      "name": "h3@text"
+    },
+    "ruleToc": {
+      "chapterList": ".book-chapter@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "https://www.aakkrr.com/book/{{key}}/{{page}}",
+    "weight": 0
+  }
+]
