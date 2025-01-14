@@ -1,0 +1,23 @@
+[
+  {
+    "articleStyle": 0,
+    "customOrder": -10098460,
+    "enableJs": true,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "injectJs": "//选择需要删除的标签，以,分隔\nitems = document.querySelectorAll(`\n\t.notice-top,\n\t.navbar-nav>li:nth-child(n+3),\n\t.navbar-right,\n\t.anti-select,\n\t#show-qrcode,\n\t#ex-comment,\n\t.hidden-more\n`)\n\n//把选择的html值改成空\nArray.from(items,(item)=>{\n\titem.innerHTML = ``\n\titem.style.display = `none`\n})\n\n\n\n//上面是通用js，下面的不是\n//删除网站的随机广告\nitems = document.querySelectorAll('.item')\nif(items){\nArray.from(items,(item)=>{\nif(item.querySelector('.item-num').innerText == 'AD'){\n\t\titem.innerHTML = ``\n\t\titem.style.display = `none`\n\t}\n})\n}",
+    "lastUpdateTime": 0,
+    "loadWithBaseUrl": true,
+    "ruleArticles": "",
+    "ruleContent": "",
+    "ruleDescription": "",
+    "ruleLink": "",
+    "ruleTitle": "",
+    "singleUrl": true,
+    "sourceComment": "广告屏蔽测试，阅读版本需要22.11.08以上",
+    "sourceGroup": "R18",
+    "sourceIcon": "https://www.fulitu.cc/usr/themes/photograph/favicon.png",
+    "sourceName": "福利兔",
+    "sourceUrl": "https://www.fulitu.cc"
+  }
+]
